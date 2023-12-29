@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 20rem;
+            gap: 10px;
+        }
+    </style>
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Cadastro de Diaristas</h1>
+
+    <form class="form" method="POST" th:object="${form}">
+        <label for="">Nome:</label>
+        <input type="text" th:field="*{nome}" />
+
+        <label for="">Telefone:</label>
+        <input type="text" th:field="*{telefone}"/>
+
+        <label for="">CPF:</label>
+        <input type="text" th:field="*{cpf}" />
+
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+
+
+</html>
